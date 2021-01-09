@@ -93,14 +93,6 @@ return htmlStringToWriteToFile;
 
 
 
-// TODO: Create a function to write README file
-fs.writeFile("generated.html", htmlStringToWriteToFile, (err) => {
-    if(err){
-        console.error(err);
-    }else {
-        console.log("Successfully generated HTML file");
-    }
-})
 
 // TODO: Create a function to initialize app
 function init() {
@@ -109,8 +101,18 @@ function init() {
         console.log(response);
 
         const dynamicString = generateHtml(response);
-    });
-}
+   
 
+    // TODO: Create a function to write README file
+fs.writeFile("generated.html", htmlStringToWriteToFile, (err) => {
+    if(err){
+        console.error(err);
+    }else {
+        console.log("Successfully generated HTML file");
+    }
+});
+
+});
+}
 // Function call to initialize app
 init();
