@@ -59,36 +59,12 @@ const questions = [
 ];
 
 //create a function to input data into the generated file by destructuring objects and creating a return
-const generateHtml = ({name}) => {
-    const htmlStringToWriteToFile = 
+const generateReadMe = ({name}) => {
+    const markdownStringToWriteToFile = 
 
-`<!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
-    <h1>${name}</h1>
-    <p>Savannah, Ga</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, earum, nobis iure sed atque reprehenderit qui
-        praesentium, optio consectetur excepturi repellendus hic cupiditate similique fuga necessitatibus nemo vel!
-        Optio, ea.</p>
-        <a href="http://www.github.com">Github</a>
-        <a href="http://www.linkedin.com">LinkedIn</a>
-    <script src="" async defer></script>
-</body>
-
-</html>`
+``
 ;
-return htmlStringToWriteToFile;
+return markdownStringToWriteToFile;
 }
 
 
@@ -100,15 +76,15 @@ function init() {
     inquirer.prompt(questions).then((response) => {
         console.log(response);
 
-        const dynamicString = generateHtml(response);
+        const dynamicString = generateReadMe(response);
    
 
     // TODO: Create a function to write README file
-fs.writeFile("generated.html", htmlStringToWriteToFile, (err) => {
+fs.writeFile("generated.html", dynamicString, (err) => {
     if(err){
         console.error(err);
     }else {
-        console.log("Successfully generated HTML file");
+        console.log("Your README has been generated!");
     }
 });
 
