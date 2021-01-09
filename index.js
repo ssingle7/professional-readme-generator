@@ -58,7 +58,8 @@ const questions = [
     },
 ];
 
-const generateHtml = () => {
+//create a function to input data into the generated file by destructuring objects and creating a return
+const generateHtml = ({name}) => {
     const htmlStringToWriteToFile = 
 
 `<!DOCTYPE html>
@@ -75,7 +76,7 @@ const generateHtml = () => {
 </head>
 
 <body>
-    <h1>Selena Singleton</h1>
+    <h1>${name}</h1>
     <p>Savannah, Ga</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, earum, nobis iure sed atque reprehenderit qui
         praesentium, optio consectetur excepturi repellendus hic cupiditate similique fuga necessitatibus nemo vel!
@@ -86,6 +87,8 @@ const generateHtml = () => {
 </body>
 
 </html>`
+;
+return htmlStringToWriteToFile;
 }
 
 
@@ -104,6 +107,8 @@ function init() {
     console.log("The function has run");
     inquirer.prompt(questions).then((response) => {
         console.log(response);
+
+        const dynamicString = generateHtml(response);
     });
 }
 
