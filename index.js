@@ -59,10 +59,10 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-fs.writeToFile("index.html", "<h1>This is a test</h1>", (err) => {
+fs.writeFile("sample.html", "<h1>This is a test</h1>", (err) => {
     if(err){
         console.error(err);
-    }else {
+    }else{
         console.log("Successfully generated HTML file");
     }
 })
