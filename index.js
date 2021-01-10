@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs"); 
 const inquirer = require("inquirer");
+const { title } = require("process");
 const util = require("util");
 
 
@@ -9,7 +10,7 @@ const questions = [
     {
         type: "input", 
         message: "What is your Github username?",
-        name: "name",
+        name: "username",
     },
     
     {
@@ -21,7 +22,7 @@ const questions = [
     {
         type: "input", 
         message: "What is your project's name?",
-        name: "project",
+        name: "title",
     },
     
     {
@@ -51,7 +52,7 @@ const questions = [
     {
         type: "input", 
         message: "What does the user need to know about using the repo?",
-        name: "repo",
+        name: "usage",
     },
 
     {
@@ -65,10 +66,11 @@ const questions = [
 function generateMarkdown(data) {
     {
         return `# ${data}
-        https://github.com/${data}/${data}
+        https://github.com/${username}/${title}
+        *E-mail: ${email}
         #Description
-        ${data}
-        #Table of Contents
+        ${description}
+        ##Table of Contents
       * [Installation](#installation)
       * [Usage](#usage)
       * [License](#license)
@@ -78,16 +80,16 @@ function generateMarkdown(data) {
       #Installation
       * The following necessary dependencies must be installed to run the application
       #Usage
-      *In order to use this app, ${data}
+      *In order to use this app, ${usage}
       #License
-      This project is licensed under the ${data} license. 
+      This project is licensed under the ${license} license. 
       ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
       #Contributing
-      Contributors: ${data.contributors}
+      Contributors: ${contributors}
       #Tests 
-      The following is needed to run the test: ${data.tests}
+      The following is needed to run the test: ${tests}
       #Questions
-      If you have any questions about the repo, open an issue or contact ${data.user}
+      If you have any questions about the repo, open an issue or contact ${user}
       
         
       `;
