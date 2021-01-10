@@ -20,7 +20,9 @@ To run this locally, use node js in the terminal.
 
 ### Mock Up 
 
-[Professional README](./README.PNG)
+![Professional README](./README.PNG)
+
+link to walk through video: https://drive.google.com/file/d/1k0duHRSDfXud_fUaDU-posUJjMJeIbiJ/view?usp=sharing
 
 ### Credits
 
