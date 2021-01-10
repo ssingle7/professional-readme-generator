@@ -64,10 +64,10 @@ const questions = [
 //create a function to input data into the generated file by destructuring objects and creating a return
 function generateMarkdown(data) {
     {
-        return `# ${data.title}
-        https://github.com/${data.Username}/${data.Title}
+        return `# ${data}
+        https://github.com/${data}/${data}
         #Description
-        ${data.Description}
+        ${data}
         #Table of Contents
       * [Installation](#installation)
       * [Usage](#usage)
@@ -78,16 +78,16 @@ function generateMarkdown(data) {
       #Installation
       * The following necessary dependencies must be installed to run the application
       #Usage
-      *In order to use this app, ${data.Usage}
+      *In order to use this app, ${data}
       #License
-      This project is licensed under the ${data.License} license. 
+      This project is licensed under the ${data} license. 
       ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
       #Contributing
-      Contributors: ${data.Contributing}
+      Contributors: ${data.contributors}
       #Tests 
-      The following is needed to run the test: ${data.Tests}
+      The following is needed to run the test: ${data.tests}
       #Questions
-      If you have any questions about the repo, open an issue or contact ${data.User}
+      If you have any questions about the repo, open an issue or contact ${data.user}
       
         
       `;
@@ -107,7 +107,7 @@ function init() {
    
 
     // TODO: Create a function to write README file
-fs.writeFile("generatedMarkdown.js", dynamicString, (err) => {
+fs.writeFile("generatedMarkdown.md", dynamicString, (err) => {
     if(err){
         console.error(err);
     }else {
