@@ -20,7 +20,7 @@ To run this locally, use node js in the terminal.
 
 ### Mock Up 
 
-[Professional README](README.PNG)
+[Professional README](./README.PNG)
 
 ### Credits
 
