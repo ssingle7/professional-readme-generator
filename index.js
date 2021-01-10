@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require("fs"); 
 const inquirer = require("inquirer");
+const util = require("util");
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -59,12 +62,36 @@ const questions = [
 ];
 
 //create a function to input data into the generated file by destructuring objects and creating a return
-const generateReadMe = ({name}) => {
-    const markdownStringToWriteToFile = 
-
-``
-;
-return markdownStringToWriteToFile;
+function generateMarkdown(data) {
+    {
+        return `# ${data.title}
+        https://github.com/${data.Username}/${data.Title}
+        #Description
+        ${data.Description}
+        #Table of Contents
+      * [Installation](#installation)
+      * [Usage](#usage)
+      * [License](#license)
+      * [Contributing](#contributing)
+      * [Tests](#tests)
+      * [Questions](#questions)
+      #Installation
+      * The following necessary dependencies must be installed to run the application
+      #Usage
+      *In order to use this app, ${data.Usage}
+      #License
+      This project is licensed under the ${data.License} license. 
+      ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+      #Contributing
+      Contributors: ${data.Contributing}
+      #Tests 
+      The following is needed to run the test: ${data.Tests}
+      #Questions
+      If you have any questions about the repo, open an issue or contact ${data.User}
+      
+        
+      `;
+      }
 }
 
 
@@ -76,11 +103,11 @@ function init() {
     inquirer.prompt(questions).then((response) => {
         console.log(response);
 
-        const dynamicString = generateReadMe(response);
+        const dynamicString = generateMarkdown(response);
    
 
     // TODO: Create a function to write README file
-fs.writeFile("generated.html", dynamicString, (err) => {
+fs.writeFile("generatedMarkdown.js", dynamicString, (err) => {
     if(err){
         console.error(err);
     }else {
