@@ -1,38 +1,34 @@
 # professional-readme-generator
 
-The purpose of this project was to create a calendar application that allows its users to save events for each hour of the day. The hours of the day will update by the hour that has passed highlighting as grey, the current hour red, and the hour to come in green. The user can input their task for a specific hour for it to be saved until they delete it. 
+The purpose of this project was to generate a professional README application that allows developers to generate a professional README ina way that is clean, efficient and easy to use. 
 
--Jquery was used to manipulate the DOM and to create the variables needed to notate the date, hours and specific time of day. 
+-Inquirer and Fs packages were both used to obtain the data and process this in node js . 
 
--A for loop was incorporated to cycle through the times of day and notate the current hour. 
+-An array of questions was used to obtain the user input and a function was then added to input that user data and generate the README file. 
 
--Moment.js was used to detect the exact time. 
+-Destructing the objects was inputted to create a return of the users input. 
 
--Local storage was used to ensure the user's input would be stored when the application is refreshed in the browser. 
+-Function init was the task performed to initialize the application. 
 
  # Installation
 
-To run this locally, fork the repo, clone it, and open the 'index.html' in your default browser.  
+To run this locally, use node js in the terminal.  
 
 ## Usage
 
-This application should be deployed within a browser. Enter in the task to be completed and select the file icon to save the task for that hour. 
+To run this locally, use node js in the terminal. 
 
 ### Credits
 
-* Used Bootstrap's grid system, (containers, rows, and columns).
+* Used Inquirer package from https://www.npmjs.com/package/inquirer.
 
-* Library Moment.js dat/time library 
+* nodejs.org documentation 
 
-* 02-ask-the-class
-
-* Study Groups 
-
-* code.jquery.com  
+* 02-ask-the-class  
 
 ### Moc-Up
 
-![Day Planner](Planner.PNG)
+![professional README]()
 
 ### License 
 
