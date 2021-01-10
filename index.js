@@ -68,9 +68,9 @@ function generateMarkdown(data) {
         return `# ${data.title}
         https://github.com/${data.username}
         *E-mail: ${data.email}
-        # Description
+        #  Description
         ${data.description}
-        ## Table of Contents
+        ##  Table of Contents
       * [Installation](#installation)
       * [Usage](#usage)
       * [License](#license)
@@ -80,13 +80,13 @@ function generateMarkdown(data) {
       # Installation
       * The following necessary dependencies must be installed to run the application 
       ${data.install}
-      # Usage
+      #  Usage
       *In order to use this app, 
       ${data.usage}
-      # License
+      #  License
       This project is licensed under the ${data.license} license. 
       ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-      # Contributing
+      #  Contributing
       Contributors: 
       ${data.contributors}
       # Tests 
