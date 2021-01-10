@@ -65,31 +65,35 @@ const questions = [
 //create a function to input data into the generated file by destructuring objects and creating a return
 function generateMarkdown(data) {
     {
-        return `# ${data}
-        https://github.com/${username}/${title}
-        *E-mail: ${email}
-        #Description
-        ${description}
-        ##Table of Contents
+        return `# ${data.title}
+        https://github.com/${data.username}
+        *E-mail: ${data.email}
+        # Description
+        ${data.description}
+        ## Table of Contents
       * [Installation](#installation)
       * [Usage](#usage)
       * [License](#license)
       * [Contributing](#contributing)
       * [Tests](#tests)
       * [Questions](#questions)
-      #Installation
-      * The following necessary dependencies must be installed to run the application
-      #Usage
-      *In order to use this app, ${usage}
-      #License
-      This project is licensed under the ${license} license. 
+      # Installation
+      * The following necessary dependencies must be installed to run the application 
+      ${data.install}
+      # Usage
+      *In order to use this app, 
+      ${data.usage}
+      # License
+      This project is licensed under the ${data.license} license. 
       ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-      #Contributing
-      Contributors: ${contributors}
-      #Tests 
-      The following is needed to run the test: ${tests}
-      #Questions
-      If you have any questions about the repo, open an issue or contact ${user}
+      # Contributing
+      Contributors: 
+      ${data.contributors}
+      # Tests 
+      The following is needed to run the test: 
+      ${data.tests}
+      # Questions
+      If you have any questions about the repo, open an issue or contact 
       
         
       `;
