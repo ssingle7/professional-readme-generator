@@ -18,6 +18,10 @@ To run this locally, use node js in the terminal.
 
 To run this locally, use node js in the terminal. 
 
+### Mock Up 
+
+[Professional README](README.PNG)
+
 ### Credits
 
 * Used Inquirer package from https://www.npmjs.com/package/inquirer.

@@ -1,8 +1,8 @@
-# 111
-https://github.com/111
-*E-mail: 111
+# professional README generator
+https://github.com/ssingle7
+*E-mail: ssingle7@gmail.com
 #  Description
-111
+The purpose of this project was to generate a professional README application that allows developers to generate a professional README ina way that is clean, efficient and easy to use.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -12,16 +12,16 @@ https://github.com/111
 * [Questions](#questions)
 # Installation
 * The following necessary dependencies must be installed to run the application 
-111
+inquirer and fs
 # Usage
 *In order to use this app, 
-111
+This is a very useful tool
 # License
-This project is licensed under the 111 license. 
+This project is licensed under the MIT license. 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 #  Contributing
 Contributors: 
-111
+N/A
 # Tests 
 The following is needed to run the test: 
 undefined
