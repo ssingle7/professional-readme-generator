@@ -1,6 +1,6 @@
 # professional-readme-generator
 
-The purpose of this project was to generate a professional README application that allows developers to generate a professional README ina way that is clean, efficient and easy to use. 
+The purpose of this project was to generate a professional README application that allows developers to generate a professional README ina way that is clean, efficient and easy to use. You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
 -Inquirer and Fs packages were both used to obtain the data and process this in node js . 
 
@@ -16,9 +16,12 @@ To run this locally, use node js in the terminal.
 
 ## Usage
 
-To run this locally, use node js in the terminal. 
+The application will be invoked by using the following command:
 
-### Mock Up 
+bash
+node index.js. 
+
+### Installation 
 
 ![Professional README](./README.PNG)
 
@@ -32,11 +35,9 @@ link to walk through video: https://drive.google.com/file/d/1k0duHRSDfXud_fUaDU-
 
 * 02-ask-the-class  
 
-### Moc-Up
-
-![professional README]()
-
 ### License 
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Copyright (c) [2020] [Selena Singleton]
 
